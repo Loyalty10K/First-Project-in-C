@@ -2,9 +2,9 @@
 #include <time.h>
 #include <stdlib.h>
 #include <string.h>
-#define Broj 100
+#define Number 100
 int main() {
-    char rec[Broj];
+    char word[Number];
     char a[] = ".-";
     char b[] = "-...";
     char c[] = "-.-.";
@@ -31,13 +31,12 @@ int main() {
     char x[] = "-..-";
     char y[] = "-.--";
     char z[] = "--..";
-    printf("Unesi rec: ");
-    scanf("%s", rec);
+    printf("Enter a word: ");
+    scanf("%s", word);
+    for (int k = 0; word[k] != '\0'; k++) {
+        char letter = word[k];
 
-    for (int k = 0; rec[k] != '\0'; k++) {
-        char slovo = rec[k];
-
-        switch (slovo) {
+        switch (word) {
             case 'a': printf("%s ", a); break;
             case 'b': printf("%s ", b); break;
             case 'c': printf("%s ", c); break;
@@ -68,10 +67,9 @@ int main() {
         }
     }
     printf("%s %s %s", b, c, a);
-    // printf("%s", a);
 printf("\n");
-getchar(); // pojede zaostali Enter od scanf-a
-printf("Pritisni Enter za izlaz...");
-getchar(); // sad čeka tvoj pravi Enter
+getchar();
+printf("Press enter to leave...");
+getchar();
 return 0;
 }
