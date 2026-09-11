@@ -4,6 +4,8 @@
 #include <string.h>
 #define Number 100
 int main() {
+
+    // first we define every letter with its morse code
     char word[Number];
     char a[] = ".-";
     char b[] = "-...";
@@ -35,7 +37,7 @@ int main() {
     scanf("%s", word);
     for (int k = 0; word[k] != '\0'; k++) {
         char letter = word[k];
-
+        //transforming the letter into morse code
         switch (word) {
             case 'a': printf("%s ", a); break;
             case 'b': printf("%s ", b); break;
